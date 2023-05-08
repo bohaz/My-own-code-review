@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    
+    label {
+      margin-top: 1rem;
+    }
+    
+    input[type=text],
+    input[type=email],
+    input[type=number],
+    textarea {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    select {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=radio],
+    input[type=checkbox] {
+      margin-top: 1rem;
+    }
+    
+    button[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    
+    button[type=submit]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Survey Form</h1>
+  <form id="survey-form" action="#" method="POST">
+    <p id="description">Let us know how we can improve freeCodeCamp</p>
+    <label for="name" id="name-label">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <label for="email" id="email-label">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <label for="number" id="number-label">Age:</label>
+    <input type="number" id="number" name="age" min="18" max="120" placeholder="Enter your age" required>
+    <label for="dropdown" id="dropdown-label">Which option best describes your current role?</label>
+    <select id="dropdown" name="role" required>
+      <option value="" disabled selected>Select current role</option>
+      <option value="student">Student</option>
+      <option value="full-time-job">Full Time Job</option>
+      <option value="full-time-learner">Full Time Learner</option>
+      <option value="prefer-not-to-say">Prefer not to say</option>
+      <option value="other">Other</option>
+    </select>
+    <label>Would you recommend freeCodeCamp to a friend?</label>
+    <label><input type="radio" name="recommend" value="definitely"> Definitely</label>
+     <label><input type="radio" name="recommend" value="maybe" required>Maybe</label>
+        <label><input type="radio" name="recommend" value="not-sure" required>Not sure</label>
+      </div>
+      <div class="form-group">
+       <label for="options">What did you like the most about our service? (check all that apply)</label>
+  <br>
+  <input type="checkbox" id="option1" name="option1" value="Friendly staff">
+  <label for="option1">Friendly staff</label><br>
+  <input type="checkbox" id="option2" name="option2" value="Fast service">
+  <label for="option2">Fast service</label><br>
+  <input type="checkbox" id="option3" name="option3" value="Quality products">
+  <label for="option3">Quality products</label><br>
+  <label for="comments">Comments:</label>
+<textarea id="comments" name="comments"></textarea>
+      </div>
+      
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
